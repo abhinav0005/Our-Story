@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story</title>
+    <meta name="description" content="A romantic interactive anniversary experience for Abhinav and Ritu." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen" aria-live="polite">
+      <div class="loading-heart">♥</div>
+      <h1>Initializing LoveOS...</h1>
+      <p>Loading Memories...</p>
+      <div class="loading-bar" aria-hidden="true">
+        <span></span>
+      </div>
+      <p class="loading-subtitle">Building Forever...</p>
+    </div>
+
+    <div id="app-shell" class="app-shell hidden">
+      <section class="hero-section">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="glassy-card hero-card">
+          <p class="eyebrow">Happy Engagement Anniversary</p>
+          <h1 class="hero-title" id="hero-title">Abhinav <span>❤️</span> Ritu</h1>
+          <p class="hero-copy">A love story written in soft light, brave hearts, and tiny everyday miracles.</p>
+          <button id="begin-journey" class="primary-btn">Begin Our Journey</button>
+        </div>
+      </section>
+
+      <section id="auth-section" class="auth-section hidden">
+        <div class="glassy-card auth-card">
+          <p class="eyebrow">Private access</p>
+          <h2>Who is the love of Abhinav's life?</h2>
+          <form id="auth-form" class="auth-form">
+            <input id="auth-input" type="text" placeholder="Type her name" autocomplete="off" />
+            <button type="submit" class="primary-btn">Enter</button>
+          </form>
+          <p id="auth-message" class="auth-message" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <main id="story-content" class="story-content hidden">
+        <section class="section intro-section">
+          <div class="section-heading">
+            <p class="eyebrow">Our timeline</p>
+            <h2>Every chapter still feels like a dream.</h2>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </section>
+
+        <section class="section gallery-section">
+          <div class="section-heading">
+            <p class="eyebrow">Photo gallery</p>
+            <h2>Moments that made our world brighter.</h2>
+          </div>
+          <div id="gallery" class="gallery-grid"></div>
+        </section>
+
+        <section class="section stats-section">
+          <div class="section-heading">
+            <p class="eyebrow">Love counter</p>
+            <h2>Time has only made our story sweeter.</h2>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card glass-card">
+              <span class="stat-value" id="days-count">0</span>
+              <span class="stat-label">Days Together</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-value" id="months-count">0</span>
+              <span class="stat-label">Months Together</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-value" id="years-count">0</span>
+              <span class="stat-label">Years Together</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section letter-section">
+          <div class="section-heading">
+            <p class="eyebrow">Secret letter</p>
+            <h2>Open what my heart has kept for you.</h2>
+          </div>
+          <div class="letter-shell">
+            <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Open the secret letter">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body"></div>
+              <div class="letter-card">
+                <p id="letter-text" class="letter-text"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section promise-section">
+          <div class="section-heading">
+            <p class="eyebrow">Promise wall</p>
+            <h2>Small promises, forever kept.</h2>
+          </div>
+          <div id="promise-wall" class="promise-wall"></div>
+        </section>
+
+        <section class="section dashboard-section">
+          <div class="section-heading">
+            <p class="eyebrow">Relationship dashboard</p>
+            <h2>Our love runs on trust, comfort, and joy.</h2>
+          </div>
+          <div class="dashboard-grid">
+            <div class="dashboard-card glass-card">
+              <div class="metric-row"><span>Trust</span><strong>100%</strong></div>
+              <div class="progress-bar"><span data-width="100"></span></div>
+            </div>
+            <div class="dashboard-card glass-card">
+              <div class="metric-row"><span>Love</span><strong>100%</strong></div>
+              <div class="progress-bar"><span data-width="100"></span></div>
+            </div>
+            <div class="dashboard-card glass-card">
+              <div class="metric-row"><span>Support</span><strong>100%</strong></div>
+              <div class="progress-bar"><span data-width="100"></span></div>
+            </div>
+            <div class="dashboard-card glass-card">
+              <div class="metric-row"><span>Respect</span><strong>100%</strong></div>
+              <div class="progress-bar"><span data-width="100"></span></div>
+            </div>
+            <div class="dashboard-card glass-card">
+              <div class="metric-row"><span>Arguments</span><strong>15%</strong></div>
+              <div class="progress-bar"><span data-width="15"></span></div>
+            </div>
+            <div class="dashboard-card glass-card status-card">
+              <p>Status</p>
+              <strong>BUILD SUCCESSFUL</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="section terminal-section">
+          <div class="section-heading">
+            <p class="eyebrow">Interactive terminal</p>
+            <h2>Ask the heart anything.</h2>
+          </div>
+          <div class="terminal-shell glass-card">
+            <div class="terminal-topbar">
+              <span></span><span></span><span></span>
+            </div>
+            <div id="terminal-output" class="terminal-output"></div>
+            <form id="terminal-form" class="terminal-form">
+              <label for="terminal-input">C:\LOVE&gt;</label>
+              <input id="terminal-input" type="text" spellcheck="false" autocomplete="off" />
+            </form>
+          </div>
+        </section>
+
+        <section class="section photo-wall-section">
+          <div class="section-heading">
+            <p class="eyebrow">Photo wall</p>
+            <h2>Little snapshots of our favorite life.</h2>
+          </div>
+          <div id="photo-wall" class="photo-wall"></div>
+        </section>
+
+        <section class="section reasons-section">
+          <div class="section-heading">
+            <p class="eyebrow">Reasons I love you</p>
+            <h2>Ten beautiful reasons your name lives in my heart.</h2>
+          </div>
+          <div id="reasons-grid" class="reasons-grid"></div>
+          <button id="final-trigger" class="primary-btn">Open the final page</button>
+        </section>
+      </main>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">×</button>
+      <img id="lightbox-image" src="" alt="Expanded memory" />
+    </div>
+
+    <div id="final-screen" class="final-screen hidden">
+      <div class="final-card glass-card">
+        <p class="eyebrow">Thank you</p>
+        <h2>For making ordinary days feel extraordinary.</h2>
+        <p>I Love You ❤️</p>
+        <span>— Abhinav</span>
+      </div>
+    </div>
+
+    <div class="music-player glass-card" id="music-player">
+      <button id="play-toggle" class="icon-btn" aria-label="Play or pause music">▶</button>
+      <button id="mute-toggle" class="icon-btn" aria-label="Mute music">🔊</button>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
