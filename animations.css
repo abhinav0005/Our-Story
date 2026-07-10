@@ -1,0 +1,23 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(1.8deg); } }
+@keyframes heartbeat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.14); } }
+@keyframes loadingFill { 0% { width: 0%; } 100% { width: 100%; } }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 750ms cubic-bezier(.2,.8,.2,1) forwards; }
+.hero-card, .auth-card, .timeline-card, .gallery-item, .promise-card, .dashboard-card, .terminal-shell, .photo-card, .reason-card {
+  animation: slideUp 850ms cubic-bezier(.2,.8,.2,1) both;
+}
+.primary-btn {
+  animation: pulseAccent 2.4s ease-in-out infinite;
+}
+@keyframes pulseAccent {
+  0%,100% { box-shadow: 0 0 0 0 rgba(255,77,109,0.18); }
+  50% { box-shadow: 0 0 0 12px rgba(255,77,109,0); }
+}
